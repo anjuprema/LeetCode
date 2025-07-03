@@ -9,14 +9,15 @@ import java.util.Map.Entry;
  * Note: You may assume that the majority element always exists in the array.
  * 
  * Solution: Using HashMap we can count occurrence and determine the majority element.
- * But the complexity is O(n) due to HashMap creation
+ * But the space complexity is O(n) due to HashMap creation
  * 
- * Boyer Moore Algorithm helps attain with complexity of O(1)
+ * Boyer Moore Algorithm helps attain with Time Complexity: O(n) a single pass through the array, Space Complexity: O(1)
  * Keep a variable for item (initially set to start element)
  * Keep another variable for count
  * Each time you see same element you increment count
  * Each time time you see a different element you decrement the count
  * When count reaches zero, reset with new element
+ * 
  * */
 public class MajorityElement {
 	private static int[] arr = {2,2,2,2,1,1,2,2,1,2,1,1};
@@ -42,7 +43,7 @@ public class MajorityElement {
 		System.out.println("Majority Element ->" + maxKey + " , is repeated " + maxValue + " times");
 	}
 	public static void main(String[] args) {
-		// time complexity of O(n) due to hashmap creation
+		// space complexity of O(n) due to hashmap creation
 		solutionUsingHashMap(); 
 		
 		//Solution using Boyer Moore Algorithm with Time Complexity O(1)
